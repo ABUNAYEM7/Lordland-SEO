@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Bachelor of Science in Information Systems Management (BISM) - Lordland University</title>
+  <meta name="description" content="The Bachelor of Science in Information Systems Management (BISM) at Lordland University is designed to provide technical and managerial expertise to manage information systems aligned with business strategy, ethics, and global awareness." />
+  <meta name="keywords" content="Lordland University, BISM, Information Systems Management Degree, IT Project Management, Cybersecurity, Business Intelligence, SEVIS I-20, Christian Education" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lordland.org/bsism.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/Kp4jTptL/image-copy-18.png" type="image/x-icon" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bachelor of Science in Information Systems Management (BISM) - Lordland University" />
+  <meta property="og:description" content="Explore the BISM program at Lordland University, offering expertise in information systems, cybersecurity, and business intelligence integrated with Christian values." />
+  <meta property="og:url" content="https://lordland.org/bsism.html" />
+  <meta property="og:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bachelor of Science in Information Systems Management (BISM) - Lordland University" />
+  <meta name="twitter:description" content="Join Lordland University's BISM program to develop IT and management skills integrated with ethical and strategic business principles. Apply now with SEVIS I-20 support." />
+  <meta name="twitter:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;   /* Dark blue */
+      --secondary: #3498db; /* Lighter blue */
+      --accent: #e74c3c;    /* Vibrant red */
+      --bg: #ecf0f1;        /* Light gray */
+      --light: #ffffff;     /* White */
+      --font: 'Inter', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+    /* Layout: Sidebar and Main Content using CSS Grid */
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 100vh;
+    }
+    /* Sidebar Navigation */
+    .sidebar {
+      background: var(--primary);
+      color: var(--light);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--light);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: var(--secondary);
+    }
+    /* Main Content */
+    .main {
+      padding: 2rem 3rem;
+      overflow-y: auto;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      padding: 4rem 2rem;
+      /* text-align: center; */
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      color: var(--light);
+      position: relative;
+      animation: heroFadeIn 1s ease-out;
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    /* Content Sections */
+    .section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.5s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .section p, .section ul, .section table {
+      margin-bottom: 1.5rem;
+    }
+    .section ul { list-style: disc; padding-left: 1.5rem; }
+    .section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .section table th,
+    .section table td {
+      padding: 0.75rem;
+      border: 1px solid #bdc3c7;
+      text-align: left;
+    }
+    /* Fixed Apply Button */
+    .apply-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--accent);
+      color: var(--light);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(231,76,60,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+    .apply-btn:hover {
+      transform: translateY(-3px);
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: relative;
+        height: auto;
+        padding: 1rem;
+      }
+      .main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>BISM Menu</h2>
+      <nav>
+        <a href="#overview" class="active">Overview</a>
+        <a href="#learning">Learning Outcomes</a>
+        <a href="#requirements">Graduation Requirements</a>
+        <a href="#courses">Course Requirements</a>
+        <a href="#application">Application for Graduation</a>
+      </nav>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Bachelor of Science in Information Systems Management (BISM)</h1>
+        <p>Lordland University</p>
+      </section>
+      <!-- Program Overview Section -->
+      <section id="overview" class="section">
+        <h2>Program Overview</h2>
+        <p>
+          The Bachelor of Science in Information Systems Management (BISM) at Lordland University is designed to provide students with the technical and managerial expertise required to design, implement, and manage information systems that drive organizational success. The program emphasizes the integration of technology with business strategy, ethics, and global awareness. Graduates are prepared for roles such as IT project managers, systems analysts, data architects, or cybersecurity specialists.
+        </p>
+      </section>
+      <!-- Learning Outcomes Section -->
+      <section id="learning" class="section">
+        <h2>Program Learning Outcomes (PLOs)</h2>
+        <ul>
+          <li><strong>Knowledge:</strong> Understand the role of information systems in business operations and strategy.</li>
+          <li><strong>Critical Thinking:</strong> Analyze and solve organizational problems using technology solutions.</li>
+          <li><strong>Information Utilization:</strong> Design systems aligned with organizational goals and global impacts.</li>
+          <li><strong>Communication:</strong> Collaborate effectively with stakeholders and teams.</li>
+          <li><strong>Diversity Awareness:</strong> Respect cultural and individual diversity in IT contexts.</li>
+          <li><strong>Ethics:</strong> Evaluate ethical, social, and legal implications of information systems.</li>
+        </ul>
+      </section>
+      <!-- Graduation Requirements Section -->
+      <section id="requirements" class="section">
+        <h2>Graduation Requirements</h2>
+        <ul>
+          <li><strong>Total Units:</strong> 180 quarter units (minimum CGPA of 2.0/4.0).</li>
+          <li><strong>Time Frame:</strong> Complete within 18 quarters (1.5x the standard 12-quarter program length).</li>
+          <li><strong>Administrative:</strong> Submit graduation forms and settle all financial obligations.</li>
+        </ul>
+      </section>
+      <!-- Course Requirements Section -->
+      <section id="courses" class="section">
+        <h2>Course Requirements</h2>
+        <h3>1. General Education (64 units)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Units</th>
+              <th>Courses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Communications</td>
+              <td>12</td>
+              <td>Writing, Public Speaking, Technical Communication</td>
+            </tr>
+            <tr>
+              <td>Humanities &amp; Arts</td>
+              <td>20</td>
+              <td>Philosophy, History, Art, Literature</td>
+            </tr>
+            <tr>
+              <td>Social Sciences</td>
+              <td>16</td>
+              <td>Psychology, Economics, Sociology</td>
+            </tr>
+            <tr>
+              <td>Mathematics &amp; Sciences</td>
+              <td>16</td>
+              <td>Calculus, Statistics, Natural Sciences</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>2. Major Core Curriculum (100 units)</h3>
+        <h4>Generalism (28 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BISM101</td>
+              <td>Foundations of IS Management</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM102</td>
+              <td>Ethics in IT</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM103</td>
+              <td>IS Theory and Practice</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM335</td>
+              <td>Enterprise Architecture</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM405</td>
+              <td>Business Intelligence &amp; Data Analytics</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM106</td>
+              <td>Managing Innovations in IS</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM107</td>
+              <td>Knowledge Management</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Communication (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CISM201</td>
+              <td>Telecommunications in IS</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>CISM400</td>
+              <td>Network Administration</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>CISM410</td>
+              <td>Business Network Design</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Information Systems (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SISM325</td>
+              <td>IS Project Management</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM330</td>
+              <td>Systems Analysis &amp; Design</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM225</td>
+              <td>IS in Organizations</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Security (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DISM230</td>
+              <td>Principles of Information Security</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DISM425</td>
+              <td>Cybersecurity for Leaders</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DISM420</td>
+              <td>Decision Support Systems</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Data (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DISM310</td>
+              <td>Big Data Analytics</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DISM315</td>
+              <td>Data Modeling &amp; Warehousing</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DISM320</td>
+              <td>Data Management</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>IT Infrastructure (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SISM110</td>
+              <td>Computer Essentials</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM115</td>
+              <td>Software/Hardware Infrastructure</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM320</td>
+              <td>Cloud Computing</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Web Development (12 units)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EISM210</td>
+              <td>Internet of Things</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>EISM215</td>
+              <td>Introduction to Web Design</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>EISM220</td>
+              <td>Electronic Commerce</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>3. Electives (16 units)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BISM108</td>
+              <td>Programming Fundamentals</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM220</td>
+              <td>Business Process Management</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM120</td>
+              <td>Human-Computer Interaction</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>SISM230</td>
+              <td>Global Information Systems</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BISM330</td>
+              <td>Enterprise Resource Planning</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DISM330</td>
+              <td>Digital Security</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Application for Graduation Section -->
+      <section id="application" class="section">
+        <h2>Application for Graduation</h2>
+        <p>
+          Students must submit a graduation application to the School of Business and the Office of Admissions during their final quarter. Failure to graduate in the applied quarter requires reapplication.
+        </p>
+      </section>
+    </main>
+  </div>
+  <a href="https://www.applykings.com/" class="apply-btn">
+    Apply Now <i class="fas fa-arrow-right"></i>
+  </a>
+  <script>
+    // Sidebar navigation active state management
+    const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

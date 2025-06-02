@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lordland University Gallery</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <!-- Fancybox CSS (for lightbox) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+  />
+  <!-- VanillaTilt (for 3D hover effect) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+  <style>
+
+    
+
+        /* Header */
+        header {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+
+       /* Base Navigation Styles */
+nav {
+  background: var(--primary-color);
+  padding: 1rem 0;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+/* Dropdown container */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown content styling */
+.nav-links li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions the submenu right below the parent */
+  left: 0;
+  background: #002147;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px; /* Adjust width as needed */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Dropdown items */
+.nav-links li.dropdown .dropdown-content li a {
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.nav-links li.dropdown .dropdown-content li a:hover {
+  background: var(--accent-color);
+}
+
+/* Show dropdown on hover */
+.nav-links li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Styles (optional enhancement) */
+@media (max-width: 768px) {
+  .nav-links li.dropdown .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+.nav-links li.dropdown > a::after {
+  content: ' \25BC'; /* Unicode for a downward arrow */
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+
+
+    /* SECTION BACKGROUND WITH WAVE */
+    .gallery-section {
+      position: relative;
+      background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+      color: #fff;
+      padding: 5rem 1rem;
+      overflow: hidden;
+    }
+    .gallery-section::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 120\"><path fill=\"%23fff\" d=\"M985.66,15.81C862.08,36.07,748,79.39,623.18,101.17c-90.9,16.41-184.79,18.43-275.41,2.35C233.48,80.11,119,40.71,0,32V120H1200V0C1102.73,11.42,1080.07-4.48,985.66,15.81Z\"></path></svg>') no-repeat;
+      background-size: cover;
+    }
+
+    .gallery-section .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* GALLERY GRID */
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    /* GALLERY ITEM CARD */
+    .gallery-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 calc(25% - 1.5rem);
+      min-width: 250px;
+      max-width: 100%;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    /* IMAGE */
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CAPTION / OVERLAY */
+    .gallery-caption {
+      padding: 1rem;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .gallery-caption h5 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1a237e;
+      font-weight: 600;
+    }
+    .gallery-caption p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* 3D HOVER (VanillaTilt) */
+    .tilt-card {
+      will-change: transform;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .gallery-item {
+        flex: 1 1 calc(33.333% - 1.5rem);
+      }
+    }
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 1.5rem);
+      }
+    }
+    @media (max-width: 576px) {
+      .gallery-item {
+        flex: 1 1 100%;
+      }
+      .gallery-item img {
+        height: 180px;
+      }
+    }
+
+    .simple-gallery-img {
+      border-radius: 10px;
+      /* Optional: add a subtle box-shadow for depth */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+    
+    <header>
+        <div class="container">
+            <img src="Img/image copy.png" alt="Lordland Logo" class="logo" />
+        </div>
+    </header>
+
+    <nav>
+  <div class="container">
+    <!-- Hamburger Icon (visible on mobile) -->
+    <button class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academics.html">Academic</a></li>
+      <li class="dropdown">
+        <a href="#">Admission</a>
+        <ul class="dropdown-content">
+          <li><a href="generalAdmission.html">General Admission</a></li>
+          <li><a href="specialAdmission.html">Special Admission</a></li>
+        </ul>
+      </li>      
+      
+<li class="dropdown">
+    <a href="#">Resources</a>
+    <ul class="dropdown-content">
+      <li><a href="INTERNATIONALADMISSION.html">International Admission</a></li>
+      <li><a href="library.html">The Library</a></li>
+      <li><a href="school_catalog.html">School Catalog</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="#">Certificate Verify</a></li>
+      <li><a href="policies.html">Policies And Services</a></li>
+    </ul>
+  </li>
+  
+  <li><a href="sevisi20.html">SEVIS I-20</a></li>
+      <li class="dropdown">
+        <a href="#">About Us</a>
+        <ul class="dropdown-content">
+          <li><a href="greeting.html">Greeting</a></li>
+          <li><a href="presidentmessage.html">President’s Message</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="educationalphy.html">Educational Philosophy</a></li>
+          <li><a href="statement.html">Statement Of Faith</a></li>
+          <li><a href="bible.html">Biblical Code Of Conduct</a></li>
+          <li><a href="location.html">Campus Location</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Campus Gallery</h2>
+
+      <!-- GALLERY GRID -->
+      <div class="gallery-grid">
+        <!-- GALLERY ITEM 1 -->
+        <div
+          class="gallery-item tilt-card"
+          data-tilt
+          data-tilt-max="10"
+          data-tilt-speed="400"
+        >
+          <a
+            data-fancybox="gallery"
+            href="gallery/image.png" <!-- full-size image link -->
+          >
+            <img
+              src="gallery/image.png"
+              alt="Campus Building 1"
+            />
+          </a>
+          <div class="gallery-caption">
+            <h5>Campus Building</h5>
+            <p>A glimpse of our newly renovated library facility.</p>
+          </div>
+        </div>
+
+        <!-- GALLERY ITEM 2 -->
+        <div
+          class="gallery-item tilt-card"
+          data-tilt
+          data-tilt-max="10"
+          data-tilt-speed="400"
+        >
+          <a
+            data-fancybox="gallery"
+            href="gallery/image copy 2.png"
+          >
+            <img
+              src="gallery/image copy 2.png"
+              alt="Campus Building 2"
+            />
+          </a>
+          <div class="gallery-caption">
+            <h5>Modern Library</h5>
+            <p>Host to our annual conferences and student gatherings.</p>
+          </div>
+        </div>
+
+        <!-- GALLERY ITEM 3 -->
+        <div
+          class="gallery-item tilt-card"
+          data-tilt
+          data-tilt-max="10"
+          data-tilt-speed="400"
+        >
+          <a
+            data-fancybox="gallery"
+            href="gallery/image copy.png"
+          >
+            <img
+              src="gallery/image copy.png"
+              alt="Campus Building 3"
+            />
+          </a>
+          <div class="gallery-caption">
+            <h5>Central Hall</h5>
+            <p>Cutting-edge labs for hands-on research and innovation.</p>
+          </div>
+        </div>
+
+        
+
+        <!-- Add more .gallery-item blocks as needed -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Simple Gallery Section (No Heading) -->
+<section class="simple-gallery py-5">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <img src="gallery/image copy 4.png" alt="Gallery Image 1" class="img-fluid simple-gallery-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="gallery/image copy 3.png" alt="Gallery Image 2" class="img-fluid simple-gallery-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="gallery/image copy 5.png" alt="Gallery Image 3" class="img-fluid simple-gallery-img">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="gallery/image copy 10.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+        </div>
+
+        <div class="col-6 col-md-3">
+            <img src="gallery/image copy 11.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 12.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 13.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 14.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 15.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 16.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 17.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+
+          <div class="col-6 col-md-3">
+            <img src="gallery/image copy 18.png" alt="Gallery Image 4" class="img-fluid simple-gallery-img">
+          </div>
+        <!-- Add additional image blocks as needed -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Custom CSS for Simple Gallery -->
+  
+  
+  <!-- SCRIPTS -->
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Fancybox JS (Lightbox) -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <script>
+    // Initialize Fancybox (for image lightbox)
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      // Custom options here (if needed)
+    });
+  </script>
+</body>
+</html>

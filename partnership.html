@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USANU EduPartnership</title>
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    
+    /* Base Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    /* ================================
+       CSS Variables (Colors)
+    ================================= */
+    :root {
+      /* Adjust these to fit your brand */
+      --primary-color: #004080;   /* Dark blue for nav and hero */
+      --secondary-color: #ffffff; /* White text */
+      --accent-color: #00A651;    /* Green hover/active color */
+    }
+
+    /* ================================
+       Header & Hero Section
+    ================================= */
+    header {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+      position: relative;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?education,partnership') 
+                  no-repeat center center/cover;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    /* ================================
+       Navigation Styles
+    ================================= */
+    nav {
+      background: black;
+      padding: 1rem 0;
+    }
+    nav .container {
+      /* Center the nav horizontally & limit width */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      
+      /* Flex layout for items */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Navigation Links */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      /* Adjust gap for a tighter look */
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: var(--accent-color);
+    }
+    
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .hamburger .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+    
+    /* ================================
+       Dropdown Menu Styles
+    ================================= */
+    .nav-links li.dropdown {
+      position: relative;
+    }
+    .nav-links li.dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--primary-color);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      min-width: 180px; /* Adjust width as needed */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    /* Dropdown items */
+    .nav-links li.dropdown .dropdown-content li a {
+      padding: 10px 20px;
+      display: block;
+      white-space: nowrap;
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .nav-links li.dropdown .dropdown-content li a:hover {
+      background: var(--accent-color);
+    }
+    /* Show dropdown on hover */
+    .nav-links li.dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Mobile Styles for dropdown */
+    @media (max-width: 768px) {
+      .nav-links li.dropdown .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
+    
+    /* Adds a small downward arrow to dropdown parent link */
+    .nav-links li.dropdown > a::after {
+      content: ' \25BC';
+      margin-left: 5px;
+      font-size: 0.8em;
+    }
+    
+    /* ================================
+       Multi-Column Dropdown Styles
+       (for "About Us" or similar)
+    ================================= */
+    .nav-links li.dropdown .dropdown-content.multi-column {
+      display: none; /* Hidden by default; shown on hover */
+      flex-direction: row; /* Place columns side by side */
+      gap: 20px; /* Spacing between columns */
+      padding: 1rem; /* Some padding around columns */
+    }
+    .nav-links li.dropdown .dropdown-content.multi-column .dropdown-column {
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-links li.dropdown .dropdown-content.multi-column .dropdown-column h4 {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+    /* Show multi-column dropdown on hover */
+    .nav-links li.dropdown:hover .dropdown-content.multi-column {
+      display: flex;
+    }
+    /* Mobile: stack columns vertically */
+    @media (max-width: 768px) {
+      .nav-links li.dropdown .dropdown-content.multi-column {
+        flex-direction: column;
+      }
+    }
+
+    /* ================================
+       Main Content
+    ================================= */
+    .content-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    section:last-child {
+      margin-bottom: 0;
+    }
+    section h2 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+    section p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    /* Institutions Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    
+    /* Related Links */
+    .related-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .related-links a {
+      padding: 10px 20px;
+      background: #004080;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .related-links a:hover {
+      background: var(--accent-color);
+    }
+    
+    /* Footer */
+    footer {
+      background: #002147;
+      color: #fff;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 1rem 0;
+    }
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      color: #00A651;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-column ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-column ul li a:hover {
+      color: #00A651;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Hero -->
+  <header>
+    <div class="hero">
+      <h1>EduPartnership</h1>
+      <p>Welcome to Lordland University EduPartnership. We connect educational institutions through strong collaborations for academic excellence and innovation.</p>
+    </div>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="container">
+        <!-- Hamburger Icon (visible on mobile) -->
+        <button class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academics.html">Academic</a></li>
+          <li class="dropdown">
+            <a href="#">Admission</a>
+            <ul class="dropdown-content">
+              <li><a href="generalAdmission.html">General Admission</a></li>
+              <li><a href="specialAdmission.html">Special Admission</a></li>
+            </ul>
+          </li>      
+          <li class="dropdown">
+            <a href="#">Resources</a>
+            <ul class="dropdown-content">
+              <li><a href="INTERNATIONALADMISSION.html">International Admission</a></li>
+              <li><a href="library.html">The Library</a></li>
+              <li><a href="school_catalog.html">School Catalog</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="#">Certificate Verify</a></li>
+              <li><a href="policies.html">Policies And Services</a></li>
+            </ul>
+          </li>
+          <li><a href="sevisi20.html">SEVIS I-20</a></li>
+          <li class="dropdown">
+            <a href="#">About Us</a>
+            <ul class="dropdown-content multi-column">
+              <!-- Column 1: General Information -->
+              <li class="dropdown-column">
+                <h4>General Information</h4>
+                <ul>
+                  <li><a href="greeting.html">Greeting</a></li>
+                  <li><a href="presidentmessage.html">President’s Message</a></li>
+                  <li><a href="mission.html">Mission</a></li>
+                  <li><a href="educationalphy.html">Educational Philosophy</a></li>
+                  <li><a href="statement.html">Statement Of Faith</a></li>
+                  <li><a href="bible.html">Biblical Code Of Conduct</a></li>
+                  <li><a href="location.html">Campus Location</a></li>
+                  <li><a href="history.html">History</a></li>
+                  <li><a href="school_per.html">School Performance</a></li>
+                  <li><a href="office.html">Offices and Administration</a></li>
+                </ul>
+              </li>
+              <!-- Column 2: Certifications -->
+              <li class="dropdown-column">
+                <h4>Certifications</h4>
+                <ul>
+                  <li><a href="faculty.html">Faculty</a></li>
+                  <li><a href="partnership.html">EduPartnership</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main Content Container -->
+  <div class="content-container">
+    <!-- Institutions Section -->
+    <section id="institutions">
+      <h2>Institutions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kings International Institute</td>
+            <td>UAE</td>
+          </tr>
+          <tr>
+            <td>Kings International Institute</td>
+            <td>Malta</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Join the Lordland University Family Section -->
+    <section id="join-family">
+      <h2>Join the Lordland University Family!</h2>
+      <p>Welcome to the Lordland University community. We are excited to have you explore our programs, our mission, and the many opportunities that await you here.</p>
+      <p>Learn more about our academic excellence, dedicated faculty, and vibrant student life.</p>
+      <!-- Placeholder image for group of people -->
+      <img src="img2/image copy 7.png" alt="Group of people at USANU" style="width:100%; border-radius:5px; margin-top:15px;">
+    </section>
+    
+    <!-- Related Pages / Navigation Section -->
+    <section id="related-pages">
+      <h2>Explore More</h2>
+      <div class="related-links">
+        <a href="mission.html">Mission & Objectives</a>
+        <a href="offices.html">Offices & Administration</a>
+        <a href="faculty.html">Faculty-old</a>
+        <a href="schoolPerformance.html">School Performance</a>
+        <a href="eduPartnership.html">Lordland University EduPartnership</a>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Lordland University</h3>
+        <p>Lordland University is committed to academic excellence and innovation through collaboration.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academics.html">Academic</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:info@lordlanduniversity.edu">info@lordlanduniversity.edu</a></p>
+        <p>Phone: +1 (213) 846-4411</p>
+        <p>Address: 119 Belmont Ave, Los Angeles, CA 90026</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Lordland University. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

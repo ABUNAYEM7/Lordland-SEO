@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.Sc. in Civil Engineering - Lordland University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="unanuLogo.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2c3e50;      /* Dark blue */
+      --secondary: #3498db;    /* Lighter blue */
+      --accent: #e74c3c;       /* Vibrant red */
+      --bg: #ecf0f1;           /* Light gray */
+      --light: #ffffff;        /* White */
+      --font: 'Inter', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    /* Container with Sidebar & Main Content */
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 100vh;
+    }
+    /* Sidebar Navigation */
+    .sidebar {
+      background: var(--primary);
+      color: var(--light);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--light);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: var(--secondary);
+    }
+    /* Main Content */
+    .main {
+      padding: 2rem 3rem;
+      overflow-y: auto;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--light);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      animation: heroFadeIn 1s ease-out;
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    /* Section Styles */
+    .section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.5s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+      /* text-align: center; */
+    }
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+    }
+    .section h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+      color: var(--secondary);
+    }
+    .section p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      text-align: justify;
+    }
+    /* Bullet Lists */
+    ul.bullet-list {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #bdc3c7;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: var(--secondary);
+      color: var(--light);
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: relative;
+        height: auto;
+        padding: 1rem;
+      }
+      .main { padding: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .section h2 { font-size: 1.75rem; }
+      .section h3 { font-size: 1.25rem; }
+    }
+    /* Fixed Apply Now Button */
+    .apply-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--accent);
+      color: var(--light);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(231,76,60,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+    .apply-btn:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>BSCE Menu</h2>
+      <nav>
+        <a href="#overview" class="active">Overview</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#learning">Learning Outcomes</a>
+      </nav>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Bachelor of Science in Civil Engineering (B.Sc.)</h1>
+        <p>Lordland University</p>
+      </section>
+      <!-- Overview Section -->
+      <section id="overview" class="section">
+        <h2>Overview</h2>
+        <p>
+          Lordland University’s Bachelor of Science in Civil Engineering (B.Sc.) is a 144-credit, four-year program that blends rigorous technical training with a deep commitment to faith-based ethics and social responsibility. Designed for students passionate about serving communities through engineering, the program emphasizes sustainable infrastructure, ethical decision-making, and interfaith collaboration.
+        </p>
+        <h3>Key Features:</h3>
+        <ul class="bullet-list">
+          <li><strong>Technical Excellence:</strong> Core courses in structural, environmental, geotechnical, and transportation engineering, aligned with ABET standards.</li>
+          <li><strong>Faith Integration:</strong> Religious studies and ethics courses (e.g., Faith-Driven Design, Interfaith Conflict Resolution) guide students to align projects with spiritual values like stewardship and justice.</li>
+          <li><strong>Hands-On Projects:</strong> Yearly design challenges and a 9‑credit Senior Capstone partnering with NGOs (e.g., Catholic Charities, Islamic Relief) to address global needs.</li>
+          <li><strong>Ethical Leadership:</strong> Prepares graduates to lead with integrity in roles like sustainable urban planning, disaster relief, and sacred site preservation.</li>
+          <li><strong>Outcomes:</strong> Graduates emerge as skilled engineers who innovate with moral clarity, design with environmental stewardship, and serve as ethical leaders in a diverse, interconnected world.</li>
+        </ul>
+        <p>
+          <strong>Program Structure:</strong> Total Credits: 144 | Duration: 4 Years (12 Quarters). Courses are distributed across four quarters annually (Autumn, Winter, Spring, Summer Optional).
+        </p>
+      </section>
+      <!-- Curriculum Structure Section -->
+      <section id="curriculum" class="section">
+        <h2>Curriculum Structure</h2>
+        <!-- Year 1 -->
+        <h3>Year 1</h3>
+        <h4>Autumn Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 101</td>
+              <td>Introduction to Civil Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>MATH 101</td>
+              <td>Calculus I</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ENG 101</td>
+              <td>English Composition</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>REL 101</td>
+              <td>Faith, Ethics, &amp; Engineering</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Winter Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 102</td>
+              <td>Engineering Mechanics</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>MATH 102</td>
+              <td>Calculus II</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PHYS 101</td>
+              <td>Physics I</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 150</td>
+              <td>First-Year Design Project</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Spring Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 201</td>
+              <td>Strength of Materials</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>MATH 201</td>
+              <td>Differential Equations</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CHEM 101</td>
+              <td>General Chemistry</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>HIST 101</td>
+              <td>World History</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Year 2 -->
+        <h3>Year 2</h3>
+        <h4>Autumn Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 202</td>
+              <td>Fluid Mechanics</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 203</td>
+              <td>Structural Analysis</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PHYS 102</td>
+              <td>Physics II</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 250</td>
+              <td>Community-Based Design Project</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Winter Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 204</td>
+              <td>Geotechnical Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 205</td>
+              <td>Construction Materials and Methods</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ECON 101</td>
+              <td>Principles of Economics</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>REL 202</td>
+              <td>Engineering for Social Justice</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Spring Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 301</td>
+              <td>Transportation Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 302</td>
+              <td>Environmental Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PHIL 205</td>
+              <td>Ethics in Science &amp; Technology</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Elective Technical Elective 1</td>
+              <td>&nbsp;</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Year 3 -->
+        <h3>Year 3</h3>
+        <h4>Autumn Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 303</td>
+              <td>Hydrology and Water Resources</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 304</td>
+              <td>Concrete and Steel Structures</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 306</td>
+              <td>Ethics in Environmental Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 350</td>
+              <td>Advanced Design Project</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Winter Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 305</td>
+              <td>Surveying and Mapping</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 401</td>
+              <td>Project Management for Civil Engineers</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 407</td>
+              <td>Religious Heritage Sites Preservation</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Elective Technical Elective 2</td>
+              <td>&nbsp;</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Spring Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 402</td>
+              <td>Advanced Structural Design</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 403</td>
+              <td>Foundation Engineering</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>COMM 101</td>
+              <td>Interfaith Communication</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Elective Technical Elective 3</td>
+              <td>&nbsp;</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Year 4 -->
+        <h3>Year 4</h3>
+        <h4>Autumn Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 404</td>
+              <td>Urban Infrastructure Planning</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CE 450 (Part 1)</td>
+              <td>Senior Capstone Project</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>BIOL 101</td>
+              <td>Environmental Science</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>SOC 101</td>
+              <td>Religion, Poverty, and Infrastructure</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Winter Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 450 (Part 2)</td>
+              <td>Senior Capstone Project</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Elective Technical Elective 4</td>
+              <td>&nbsp;</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>REL 303</td>
+              <td>Interfaith Conflict Resolution</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ARTS 105</td>
+              <td>Art and Sacred Spaces</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Spring Quarter (12 Credits)</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CE 450 (Part 3)</td>
+              <td>Senior Capstone Project</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PSYC 201</td>
+              <td>Community Psychology</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>REL 404</td>
+              <td>Vocation &amp; Spiritual Discipline</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Elective Free Elective</td>
+              <td>&nbsp;</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Key Additions & Adjustments -->
+        <h3>Key Additions &amp; Adjustments</h3>
+        <ul class="bullet-list">
+          <li><strong>Project Courses Added:</strong> CE 150, CE 250, CE 350, CE 450 (9 cr. total), and a Free Elective.</li>
+          <li><strong>Technical Electives (12 Credits):</strong> CE 415 (Disaster Relief &amp; Interfaith Collaboration), CE 416 (Sacred Architecture &amp; Eco-Theology), CE 417 (Faith-Based Urban Planning), CE 418 (Sustainable Infrastructure in Developing Nations).</li>
+        </ul>
+        <!-- Faith Integration Highlights -->
+        <h3>Faith Integration Highlights</h3>
+        <ul class="bullet-list">
+          <li>CE 306: Quranic/Biblical environmental ethics applied to water conservation.</li>
+          <li>CE 407: Restoration of mosques, churches, and temples using sustainable materials.</li>
+          <li>REL 303: Resolving land disputes between religious communities through ethical engineering.</li>
+          <li>Capstone: Partner with NGOs (e.g., Islamic Relief, Catholic Charities) to design infrastructure for marginalized groups.</li>
+        </ul>
+        <!-- Total Credit Breakdown -->
+        <h3>Total Credit Breakdown</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core Engineering</td>
+              <td>84</td>
+            </tr>
+            <tr>
+              <td>Technical Electives</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>General Education</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Religious Studies</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Free Elective</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <th>144</th>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Additional Requirements -->
+        <h3>Additional Requirements</h3>
+        <ul class="bullet-list">
+          <li><strong>Service-Learning:</strong> 60 hours with faith-based NGOs (e.g., building clinics with World Vision).</li>
+          <li><strong>Ethics Retreat:</strong> Annual workshop on dilemmas like AI ethics vs. religious values.</li>
+        </ul>
+      </section>
+      <!-- Learning Outcomes Section -->
+      <section id="learning" class="section">
+        <h2>Learning Outcomes</h2>
+        <ol>
+          <li><strong>Technical Proficiency:</strong>
+            <ul class="bullet-list">
+              <li>Design and analyze infrastructure (e.g., bridges, water systems) using tools like AutoCAD and finite element analysis.</li>
+              <li>Solve environmental challenges with climate resilience, waste management, and resource conservation.</li>
+            </ul>
+          </li>
+          <li><strong>Ethical and Faith-Based Competence:</strong>
+            <ul class="bullet-list">
+              <li>Integrate religious ethics into engineering decisions (e.g., Quranic water stewardship, Christian creation care).</li>
+              <li>Preserve sacred spaces using culturally sensitive, sustainable techniques.</li>
+            </ul>
+          </li>
+          <li><strong>Leadership and Service:</strong>
+            <ul class="bullet-list">
+              <li>Lead interfaith teams with humility and cultural awareness inspired by servant leadership.</li>
+              <li>Design infrastructure for vulnerable communities (e.g., disaster-resistant housing, clean water systems) in partnership with NGOs.</li>
+            </ul>
+          </li>
+          <li><strong>Innovation and Sustainability:</strong>
+            <ul class="bullet-list">
+              <li>Advance green technologies, such as renewable energy systems aligned with eco-theological principles.</li>
+              <li>Plan inclusive urban spaces that honor diverse religious practices.</li>
+            </ul>
+          </li>
+          <li><strong>Professional and Spiritual Growth:</strong>
+            <ul class="bullet-list">
+              <li>Resolve ethical dilemmas using interfaith mediation and moral reasoning frameworks.</li>
+              <li>Balance vocation and spirituality through contemplative practices (e.g., mindfulness, Jesuit discernment).</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
+  <!-- Fixed Apply Now Button -->
+  <a href="https://www.applykings.com/" class="apply-btn">
+    Apply Now <i class="fas fa-arrow-right"></i>
+  </a>
+  <script>
+    // Sidebar navigation active state and smooth scrolling
+    const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Master of Science in Computer Science Engineering (MSCSE) - Lordland University</title>
+  <meta name="description" content="The Master of Science in Computer Science Engineering (MSCSE) at Lordland University offers advanced training in robotics, AI, drone technology, cybersecurity, and ethical Christian leadership." />
+  <meta name="keywords" content="Lordland University, MSCSE, Master of Science Computer Science Engineering, Robotics, Artificial Intelligence, Drone Technology, Cybersecurity, Christian Leadership, Graduate Program, USA" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lordland.org/mscs.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/Kp4jTptL/image-copy-18.png" type="image/x-icon" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Master of Science in Computer Science Engineering (MSCSE) - Lordland University" />
+  <meta property="og:description" content="Join Lordland University’s MSCSE program to master robotics, AI, drone tech, cybersecurity, and faith-driven leadership for tomorrow’s tech innovators." />
+  <meta property="og:url" content="https://lordland.org/mscs.html" />
+  <meta property="og:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Master of Science in Computer Science Engineering (MSCSE) - Lordland University" />
+  <meta name="twitter:description" content="Advance your career with Lordland University’s MSCSE program focusing on AI, robotics, drone technology, cybersecurity, and Christian ethical leadership." />
+  <meta name="twitter:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (if needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;      /* Dark blue */
+      --secondary: #3498db;    /* Light blue */
+      --accent: #e74c3c;       /* Vibrant red */
+      --bg: #ecf0f1;           /* Light gray */
+      --light: #ffffff;        /* White */
+      --font: 'Inter', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    /* Container: Sidebar & Main Content */
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 100vh;
+    }
+    /* Sidebar Navigation */
+    .sidebar {
+      background: var(--primary);
+      color: var(--light);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--light);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: var(--secondary);
+    }
+    /* Main Content */
+    .main {
+      padding: 2rem 3rem;
+      overflow-y: auto;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      padding: 4rem 2rem;
+      text-align: left;
+      color: var(--light);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      animation: heroFadeIn 1s ease-out;
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-align: left;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+    /* Section Styles */
+    .section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.5s ease;
+      text-align: left;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+      text-align: left;
+    }
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+    }
+    .section h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+      color: var(--secondary);
+      text-align: left;
+    }
+    .section p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    /* Bullet Lists */
+    ul.bullet-list {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #bdc3c7;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: var(--secondary);
+      color: var(--light);
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: relative;
+        height: auto;
+        padding: 1rem;
+      }
+      .main { padding: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .section h2 { font-size: 1.75rem; }
+      .section h3 { font-size: 1.25rem; }
+    }
+    /* Fixed Apply Now Button */
+    .apply-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--accent);
+      color: var(--light);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(231,76,60,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+    .apply-btn:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>MSCSE Menu</h2>
+      <nav>
+        <a href="#overview" class="active">Overview</a>
+        <a href="#outcomes">Learning Outcomes</a>
+        <a href="#structure">Program Structure</a>
+        <a href="#leadership">Faith-Based Leadership</a>
+        <a href="#whychoose">Why Choose MSCSE?</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Master of Science in Computer Science Engineering (MSCSE)</h1>
+        <p>Lordland University, USA</p>
+      </section>
+      <!-- Overview Section -->
+      <section id="overview" class="section">
+        <h2>Program Overview</h2>
+        <p>
+          The Master of Science in Computer Science Engineering (MSCSE) at Lordland University is designed to provide students with advanced technical knowledge, business acumen, and ethical leadership rooted in Christian values. This program integrates cutting-edge technology in robotics, drone technology, artificial intelligence, cybersecurity, and data analytics with business strategies and ethical computing practices.
+        </p>
+        <p>
+          With a focus on robotics and drone technology, the program prepares students to develop autonomous systems, intelligent machines, and UAV applications that are revolutionizing industries such as agriculture, defense, logistics, healthcare, and urban development.
+        </p>
+      </section>
+      <!-- Learning Outcomes Section -->
+      <section id="outcomes" class="section">
+        <h2>Program Learning Outcomes (PLOs)</h2>
+        <ol>
+          <li><strong>Apply Advanced Computing &amp; Robotics Principles:</strong> Design intelligent systems, robotic algorithms, and AI-driven automation for real-world applications.</li>
+          <li><strong>Integrate Business &amp; Technology Strategies:</strong> Utilize computer science, drone technology, and AI to enhance business operations and strategic planning.</li>
+          <li><strong>Develop AI, Robotics &amp; UAV Systems:</strong> Create autonomous drones, self-learning robots, and robotic process automation solutions.</li>
+          <li><strong>Enhance Cybersecurity &amp; Data Privacy:</strong> Implement secure network protocols and ethical AI practices in emerging technologies.</li>
+          <li><strong>Master Cloud, IoT &amp; Big Data Analytics:</strong> Deploy high-performance computing solutions leveraging cloud and edge computing.</li>
+          <li><strong>Apply Christian Ethics in Technology:</strong> Demonstrate faith-driven leadership by aligning technological advancements with moral values.</li>
+          <li><strong>Advance Computational Research &amp; Innovation:</strong> Conduct scientific research in robotics, automation, and drone technology.</li>
+          <li><strong>Communicate Effectively in Teams:</strong> Collaborate in interdisciplinary teams to solve complex engineering challenges.</li>
+        </ol>
+      </section>
+      <!-- Program Structure Section -->
+      <section id="structure" class="section">
+        <h2>Program Structure</h2>
+        <p>
+          The MSCSE curriculum consists of:
+        </p>
+        <ul class="bullet-list">
+          <li><strong>Core Curriculum (32 Credits):</strong> 8 courses</li>
+          <li><strong>Specialization Courses (24 Credits):</strong> 6 courses</li>
+          <li><strong>Capstone Project (4 Credits):</strong> 1 course</li>
+          <li><strong>Total:</strong> 15 courses, 60 credits</li>
+        </ul>
+        <!-- Core Curriculum Table -->
+        <h3>Core Curriculum (32 Credits)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MSCSE600</td>
+              <td>Advanced Computer Science Engineering</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE601</td>
+              <td>Software Engineering &amp; Design Patterns</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE602</td>
+              <td>Data Structures and Algorithm Optimization</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE603</td>
+              <td>Cloud Computing &amp; Distributed Systems</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE604</td>
+              <td>Cybersecurity &amp; Ethical Hacking</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE605</td>
+              <td>Artificial Intelligence &amp; Deep Learning</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE606</td>
+              <td>Big Data Analytics &amp; Data Science</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MSCSE607</td>
+              <td>Business Strategy for Tech Leaders</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Specialization Tracks Section -->
+        <h3>Specialization Tracks (24 Credits)</h3>
+        <p>Students choose 6 courses from one or more of the following tracks:</p>
+        <ul class="bullet-list">
+          <li><strong>Robotics &amp; Drone Technology Track:</strong> MSCSE620, MSCSE625, MSCSE630, MSCSE635, MSCSE640, MSCSE645.</li>
+          <li><strong>Cybersecurity &amp; Cloud Computing Track:</strong> MSCSE650, MSCSE655, MSCSE660, MSCSE665.</li>
+          <li><strong>Software Development &amp; AI Track:</strong> MSCSE670, MSCSE675, MSCSE680, MSCSE685.</li>
+          <li><strong>Data Science &amp; Analytics Track:</strong> MSCSE690, MSCSE695, MSCSE700, MSCSE705.</li>
+        </ul>
+        <!-- Capstone Project Section -->
+        <h3>Capstone Project (4 Credits)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MSCSE710</td>
+              <td>Applied Robotics &amp; AI Capstone Project</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Faith-Based Leadership Section -->
+      <section id="leadership" class="section">
+        <h2>Faith-Based Leadership in Technology</h2>
+        <ul class="bullet-list">
+          <li><strong>Christian Approach to Tech Leadership:</strong> Integrating faith-driven decision-making, ethical AI, and responsible computing into the curriculum.</li>
+          <li><strong>Technology as a Tool for Good:</strong> Ensuring advancements in robotics, drones, AI, and cybersecurity align with Christian morals and values.</li>
+          <li><strong>Servant Leadership in Tech:</strong> Leading with humility, integrity, and ethical responsibility based on Biblical principles.</li>
+          <li><strong>Ethical AI &amp; Robotics:</strong> Upholding human dignity in automation, AI decision-making, and UAV applications.</li>
+          <li><strong>Digital Transformation &amp; Global Stewardship:</strong> Using technology to improve lives, bridge digital divides, and promote social good worldwide.</li>
+        </ul>
+      </section>
+      <!-- Why Choose Section -->
+      <section id="whychoose" class="section">
+        <h2>Why Choose the MSCSE Program at Lordland University?</h2>
+        <ul class="bullet-list">
+          <li><strong>Cutting-Edge Robotics &amp; AI:</strong> Learn from industry experts in robotics, drone technology, AI, and automation.</li>
+          <li><strong>Business &amp; Leadership Integration:</strong> Develop strategic thinking and ethical leadership alongside technical expertise.</li>
+          <li><strong>Faith-Based &amp; Ethical Computing:</strong> Align Christian values with scientific research and responsible AI practices.</li>
+          <li><strong>Industry-Oriented Learning:</strong> Engage in hands-on capstone projects, robotics labs, and drone testing.</li>
+          <li><strong>Flexible Learning Model:</strong> Designed for working professionals with online, hybrid, and in-person options.</li>
+        </ul>
+      </section>
+      <!-- Conclusion Section -->
+      <section id="conclusion" class="section">
+        <h2>Conclusion</h2>
+        <p>
+          The Master of Science in Computer Science Engineering (MSCSE) at Lordland University prepares graduates to become innovative, ethical, and faith-driven leaders in robotics, AI, cybersecurity, and drone technology. By combining advanced engineering skills, business strategy, and Christian leadership, students will drive technological advancements while upholding moral integrity.
+        </p>
+      </section>
+    </main>
+  </div>
+  <!-- Fixed Apply Now Button -->
+  <a href="https://www.applykings.com/" class="apply-btn">
+    Apply Now <i class="fas fa-arrow-right"></i>
+  </a>
+  <script>
+    // Sidebar navigation: active state and smooth scrolling
+    const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

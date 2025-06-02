@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>General Admission - Lordland University</title>
+  <meta name="description" content="Discover the General Admission process at Lordland University. Learn eligibility, application requirements, and degree program qualifications for undergraduate, graduate, and doctoral studies." />
+  <meta name="keywords" content="Lordland University, General Admission, Undergraduate Admission, Graduate Admission, Doctoral Admission, Application Process, Eligibility, Transcripts, Admission Requirements" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lordland.org/generalAdmission.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/Kp4jTptL/image-copy-18.png" type="image/x-icon" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="General Admission - Lordland University" />
+  <meta property="og:description" content="Explore the General Admission process at Lordland University, including eligibility criteria, required documents, and application procedures for all degree programs." />
+  <meta property="og:url" content="https://lordland.org/generalAdmission.html" />
+  <meta property="og:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="General Admission - Lordland University" />
+  <meta name="twitter:description" content="Learn about the General Admission requirements and application process at Lordland University for undergraduate, graduate, and doctoral programs." />
+  <meta name="twitter:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+   /* Header */
+   header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* ================================
+   Base Navigation Styles
+================================ */
+
+
+:root {
+  --primary-color: #000;       /* Example fallback */
+  --secondary-color: #fff;     /* Example fallback */
+  --accent-color: #ff9800;     /* Example fallback */
+}
+nav {
+  background: var(--primary-color);
+  padding: 1rem 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 65px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* ================================
+   Dropdown Menu Styles
+================================ */
+
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown content styling */
+.nav-links li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions the submenu right below the parent */
+  left: 0;
+  background: var(--primary-color);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px; /* Adjust width as needed */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Dropdown items */
+.nav-links li.dropdown .dropdown-content li a {
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.nav-links li.dropdown .dropdown-content li a:hover {
+  background: var(--accent-color);
+}
+
+/* Show dropdown on hover */
+.nav-links li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Styles (optional enhancement) */
+@media (max-width: 768px) {
+  .nav-links li.dropdown .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* Adds a small downward arrow to dropdown parent link */
+.nav-links li.dropdown > a::after {
+  content: ' \25BC'; /* Unicode for a downward arrow */
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+/* ================================
+   Multi-Column Dropdown Styles
+   (for "About Us" or similar)
+================================ */
+
+/* Container for multi-column dropdown */
+.nav-links li.dropdown .dropdown-content.multi-column {
+  display: none;              /* Hidden by default; shown on hover */
+  flex-direction: row;        /* Place columns side by side */
+  gap: 20px;                  /* Spacing between columns */
+  padding: 1rem;              /* Some padding around columns */
+}
+
+/* Each column in the multi-column dropdown */
+.nav-links li.dropdown .dropdown-content.multi-column .dropdown-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: style the column titles (h4) */
+.nav-links li.dropdown .dropdown-content.multi-column .dropdown-column h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Show multi-column dropdown on hover */
+.nav-links li.dropdown:hover .dropdown-content.multi-column {
+  display: flex;
+}
+
+/* Mobile: stack columns vertically */
+@media (max-width: 768px) {
+  .nav-links li.dropdown .dropdown-content.multi-column {
+    flex-direction: column;
+  }
+}
+
+
+
+
+    header {
+      background: url('https://source.unsplash.com/1600x400/?university,campus') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 3px 20px;
+      border-bottom: 5px solid rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    /* Section Styles */
+    section {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      color: #007BFF;
+      margin-top: 0;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+    }
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .section-content img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .section-content {
+        flex-direction: column;
+      }
+    }
+
+
+
+    /* Footer Base Styles */
+footer {
+  background: var(--primary-color, #002147);
+  color: var(--secondary-color, #fff);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1 1 220px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Footer Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-column ul li a {
+  color: var(--secondary-color, #fff);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-column ul li a:hover {
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: var(--secondary-color, #fff);
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    padding: 1rem 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="Img/image copy.png" alt="Lordland Logo" class="logo" />
+        </div>
+    </header>
+
+
+    
+    <nav>
+      <div class="container">
+        <!-- Hamburger Icon (visible on mobile) -->
+        <button class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+    
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academics.html">Academic</a></li>
+          <li class="dropdown">
+            <a href="#">Admission</a>
+            <ul class="dropdown-content">
+              <li><a href="generalAdmission.html">General Admission</a></li>
+              <li><a href="specialAdmission.html">Special Admission</a></li>
+            </ul>
+          </li>      
+          
+    <li class="dropdown">
+        <a href="#">Resources</a>
+        <ul class="dropdown-content">
+          <li><a href="INTERNATIONALADMISSION.html">International Admission</a></li>
+          <li><a href="library.html">The Library</a></li>
+          <li><a href="school_catalog.html">School Catalog</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="#">Certificate Verify</a></li>
+          <li><a href="policies.html">Policies And Services</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="sevisi20.html">SEVIS I-20</a></li>
+    
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <ul class="dropdown-content multi-column">
+                  <!-- Column 1: General Information -->
+                  <li class="dropdown-column">
+                    <h4>General Information</h4>
+                    <ul>
+                      <!-- Existing items you already had -->
+                      <li><a href="greeting.html">Greeting</a></li>
+                      <li><a href="presidentmessage.html">President’s Message</a></li>
+                      <li><a href="mission.html">Mission</a></li>
+                      <li><a href="educationalphy.html">Educational Philosophy</a></li>
+                      <li><a href="statement.html">Statement Of Faith</a></li>
+                      <li><a href="bible.html">Biblical Code Of Conduct</a></li>
+                      <li><a href="location.html">Campus Location</a></li>
+              
+                      <!-- New items from the screenshot -->
+                      <li><a href="history.html">History</a></li>
+                      <li><a href="school_per.html">School Performance</a></li>
+                      <li><a href="office.html">Offices and Administration</a></li>
+                    </ul>
+                  </li>
+              
+                  <!-- Column 2: Certifications -->
+                  <li class="dropdown-column">
+                    <h4>Certifications</h4>
+                    <ul>
+                      <li><a href="faculty.html">Faculty</a></li>
+                      <li><a href="partnership.html">EduPartnership</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+  <header>
+    <div class="container" style="color: #333;">
+      <h1>General Admission</h1>
+      <p>Your gateway to academic excellence at Lordland University</p>
+    </div>
+  </header>
+  <div class="container">
+    <!-- General Admission Section -->
+    <section id="general-admission">
+      <h2>General Admission</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Applicants seeking admission to Lordland University are evaluated on the basis of academic ability sufficient to complete the selected educational program. To be considered an acceptance, the applicant must be at least 18 years of age when applying, and his/her status has to be a legal residence of the United States.
+          </p>
+        </div>
+        <img src="img2/pexels-buro-millennial-636760-1438081.jpg" alt="General Admission" />
+      </div>
+    </section>
+    
+    <!-- Admission Procedure Section -->
+    <section id="admission-procedure">
+      <h2>Admission Procedure</h2>
+      <div class="section-content">
+        <img src="img2/pexels-tara-winstead-7723533.jpg" alt="Admission Procedure" />
+        <div class="section-text">
+          <p>
+            Lordland University strives to bring students who are committed to personal and intellectual growth. The university welcomes students who are creative, motivated, self-disciplined, and committed to Christian learning.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Application Acknowledgement Section -->
+    <section id="application-acknowledgement">
+      <h2>Application Acknowledgement</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Student applicants may expect to receive acknowledgement of their applications within three weeks of filing. Lordland University advises prospective students to supply complete and accurate information for admission and for all other university petition forms. Further, applicants must submit authentic and official transcripts of all previous academic work attempted as well as military and vocational training records, if any.
+          </p>
+          <p>
+            Transcripts will be evaluated and credit will be given in accordance with the university’s transfer credit and assessment of prior training policy. Failure to file a complete application may result in denial of admission, cancellation of academic credit, suspension, or expulsion. A transcript has to be sent directly from the school of origin and must contain the official seal with the Custodian of Record’s signature. The responsibility for ensuring that an official transcript reaches our Office of Admissions and Records rests with the applicant. Unofficial transcripts will be accepted for preliminary evaluation; however, official transcripts must be on file before a degree or certificate program is granted.
+          </p>
+        </div>
+        <img src="img2/pexels-ketut-subiyanto-4560083.jpg" alt="Application Acknowledgement" />
+      </div>
+    </section>
+    
+    <!-- Application Procedure Section -->
+    <section id="application-procedure">
+      <h2>Application Procedure</h2>
+      <div class="section-content">
+        <img src="img2/pexels-mikhail-nilov-7731332.jpg" alt="Application Procedure" />
+        <div class="section-text">
+          <p>
+            Prospective students, applying for part-time or full-time, must file a complete application. To request an application, please contact:
+          </p>
+          <p>
+            <strong>Lordland University Office of Admissions and Records</strong><br>
+            119 Belmont Ave, Los Angeles, CA 90026<br>
+            TEL: (213) 250-7744<br>
+            FAX: (213) 250-7745<br>
+            <a href="http://www.lordland.us" target="_blank">www.lordland.us</a><br>
+            <a href="mailto:admission@lordland.us">admission@lordland.us</a>
+          </p>
+          <p>
+            The mandatory $350 non-refundable application fee should be in the form of a check or money order payable to Lordland University. When submitting the application in person, the fee can be paid by credit card or cash.
+          </p>
+          <p>
+            Plan ahead to request the required transcripts of all previous scholastic work from each school or college attended. The transcripts required at Lordland University are:
+          </p>
+          <ul>
+            <li>High school transcript and/or diploma</li>
+            <li>An official transcript from each college or university attended</li>
+            <li>A letter of recommendation from your formal instructor</li>
+            <li>Additional application requirements for international students:
+              <ul>
+                <li>Photocopies of your current passport, I-94, and Visa</li>
+                <li>Driver's License issued in the United States or a picture ID</li>
+                <li>I-20 issued from your previous institution</li>
+                <li>Financial Statement</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Bachelor’s Degree Programs Section -->
+    <section id="bachelors-programs">
+      <h2>Bachelor’s Degree Programs</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Students will qualify for undergraduate admission if they:
+          </p>
+          <ul>
+            <li>Have graduated from high school, earned a Certificate of General Education Development (GED), or passed the California High School Proficiency Examination</li>
+            <li>Have completed admission in college or college-preparatory subjects with grades of “C” or better</li>
+          </ul>
+        </div>
+        <img src="img2/image.png" alt="Bachelor’s Programs" />
+      </div>
+    </section>
+    
+    <!-- Master’s Degree Programs Section -->
+    <section id="masters-programs">
+      <h2>Master’s Degree Programs</h2>
+      <div class="section-content">
+        <img src="img2/pexels-ekrulila-2292837 (2).jpg" alt="Master’s Programs" />
+        <div class="section-text">
+          <p>
+            Students will qualify for graduate admission if they:
+          </p>
+          <ul>
+            <li>Have completed a four-year college course of study</li>
+            <li>Have the baccalaureate earned from the college or university previously attended</li>
+            <li>Have attained a grade point average of at least 2.5 in an acceptable baccalaureate degree</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Doctoral’s Degree Programs Section -->
+    <section id="doctoral-programs">
+      <h2> Degree Programs</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Students will qualify for graduate admission if they meet the following minimum requirements for the doctoral degree program:
+          </p>
+          <ul>
+            <li>An earned baccalaureate degree and master’s degree from an accredited institution</li>
+            <li>Good academic standing at the last institution attended</li>
+            <li>A minimum grade point average of 3.0 in upper division and graduate study</li>
+          </ul>
+        </div>
+        <img src="img2/image copy.png" alt="Doctoral Programs" />
+      </div>
+    </section>
+  </div>
+
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column about">
+        <h3>About Lordland University</h3>
+        <p>
+          Lordland University is dedicated to providing innovative and transformative education with a strong foundation in Christian ethics. Our mission is to empower students to become ethical leaders in their fields.
+        </p>
+      </div>
+      <div class="footer-column links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="policies.html">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-column contact">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:info@lordland.us">info@lordland.us</a></p>
+        <p>Phone: +1(213)846-4411</p>
+        <p>Address: 119 Belmont Ave, Los Angeles, California 90026</p>
+      </div>
+      <div class="footer-column social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/lordlanduniversity.overseas"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Lordland University. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    }</script>
+</body>
+</html>

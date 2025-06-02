@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>Special Admission - Lordland University</title>
+  <meta name="description" content="Explore Special Admission options at Lordland University, including audit, provisional, and special standing admissions with requirements and procedures." />
+  <meta name="keywords" content="Lordland University, Special Admission, Audit Admission, Provisional Admission, Special Standing Admission, Admission Requirements, University Admission Process" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lordland.org/specialAdmission.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/Kp4jTptL/image-copy-18.png" type="image/x-icon" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Special Admission - Lordland University" />
+  <meta property="og:description" content="Learn about special admission pathways at Lordland University including audit, provisional, and special standing admissions." />
+  <meta property="og:url" content="https://lordland.org/specialAdmission.html" />
+  <meta property="og:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Special Admission - Lordland University" />
+  <meta name="twitter:description" content="Discover Lordland University’s special admission options with flexible pathways for students including audit and provisional admissions." />
+  <meta name="twitter:image" content="https://i.ibb.co/4RqfqmfZ/image-copy-4.png" />
+  <style>
+    /* Basic Reset and Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+
+
+       /* Header */
+       header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+       
+       
+       
+/* ================================
+   Base Navigation Styles
+================================ */
+
+:root {
+  --primary-color: #000;       /* Example fallback */
+  --secondary-color: #fff;     /* Example fallback */
+  --accent-color: #ff9800;     /* Example fallback */
+}
+
+nav {
+  background: var(--primary-color);
+  padding: 1rem 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 65px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* ================================
+   Dropdown Menu Styles
+================================ */
+
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown content styling */
+.nav-links li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions the submenu right below the parent */
+  left: 0;
+  background: var(--primary-color);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px; /* Adjust width as needed */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Dropdown items */
+.nav-links li.dropdown .dropdown-content li a {
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.nav-links li.dropdown .dropdown-content li a:hover {
+  background: var(--accent-color);
+}
+
+/* Show dropdown on hover */
+.nav-links li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Styles (optional enhancement) */
+@media (max-width: 768px) {
+  .nav-links li.dropdown .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* Adds a small downward arrow to dropdown parent link */
+.nav-links li.dropdown > a::after {
+  content: ' \25BC'; /* Unicode for a downward arrow */
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+/* ================================
+   Multi-Column Dropdown Styles
+   (for "About Us" or similar)
+================================ */
+
+/* Container for multi-column dropdown */
+.nav-links li.dropdown .dropdown-content.multi-column {
+  display: none;              /* Hidden by default; shown on hover */
+  flex-direction: row;        /* Place columns side by side */
+  gap: 20px;                  /* Spacing between columns */
+  padding: 1rem;              /* Some padding around columns */
+}
+
+/* Each column in the multi-column dropdown */
+.nav-links li.dropdown .dropdown-content.multi-column .dropdown-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: style the column titles (h4) */
+.nav-links li.dropdown .dropdown-content.multi-column .dropdown-column h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Show multi-column dropdown on hover */
+.nav-links li.dropdown:hover .dropdown-content.multi-column {
+  display: flex;
+}
+
+/* Mobile: stack columns vertically */
+@media (max-width: 768px) {
+  .nav-links li.dropdown .dropdown-content.multi-column {
+    flex-direction: column;
+  }
+}
+
+
+
+    /* Header with Background Image */
+    header {
+      background: url('https://source.unsplash.com/1600x400/?university,students') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 3px 20px;
+      border-bottom: 5px solid rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    /* Section Styles */
+    section {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #007BFF;
+      margin-top: 0;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+    }
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .section-content img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .section-content {
+        flex-direction: column;
+      }
+    }
+
+
+     /* Footer Base Styles */
+footer {
+  background: var(--primary-color, #002147);
+  color: var(--secondary-color, #fff);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1 1 220px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Footer Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-column ul li a {
+  color: var(--secondary-color, #fff);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-column ul li a:hover {
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: var(--secondary-color, #fff);
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--accent-color, #e74c3c);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    padding: 1rem 0;
+  }
+}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="Img/image copy.png" alt="Lordland Logo" class="logo" />
+        </div>
+    </header>
+
+    <nav>
+      <div class="container">
+        <!-- Hamburger Icon (visible on mobile) -->
+        <button class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+    
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academics.html">Academic</a></li>
+          <li class="dropdown">
+            <a href="#">Admission</a>
+            <ul class="dropdown-content">
+              <li><a href="generalAdmission.html">General Admission</a></li>
+              <li><a href="specialAdmission.html">Special Admission</a></li>
+            </ul>
+          </li>      
+          
+    <li class="dropdown">
+        <a href="#">Resources</a>
+        <ul class="dropdown-content">
+          <li><a href="INTERNATIONALADMISSION.html">International Admission</a></li>
+          <li><a href="library.html">The Library</a></li>
+          <li><a href="school_catalog.html">School Catalog</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="#">Certificate Verify</a></li>
+          <li><a href="policies.html">Policies And Services</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="sevisi20.html">SEVIS I-20</a></li>
+    
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <ul class="dropdown-content multi-column">
+                  <!-- Column 1: General Information -->
+                  <li class="dropdown-column">
+                    <h4>General Information</h4>
+                    <ul>
+                      <!-- Existing items you already had -->
+                      <li><a href="greeting.html">Greeting</a></li>
+                      <li><a href="presidentmessage.html">President’s Message</a></li>
+                      <li><a href="mission.html">Mission</a></li>
+                      <li><a href="educationalphy.html">Educational Philosophy</a></li>
+                      <li><a href="statement.html">Statement Of Faith</a></li>
+                      <li><a href="bible.html">Biblical Code Of Conduct</a></li>
+                      <li><a href="location.html">Campus Location</a></li>
+              
+                      <!-- New items from the screenshot -->
+                      <li><a href="history.html">History</a></li>
+                      <li><a href="school_per.html">School Performance</a></li>
+                      <li><a href="office.html">Offices and Administration</a></li>
+                    </ul>
+                  </li>
+              
+                  <!-- Column 2: Certifications -->
+                  <li class="dropdown-column">
+                    <h4>Certifications</h4>
+                    <ul>
+                      <li><a href="faculty.html">Faculty</a></li>
+                      <li><a href="partnership.html">EduPartnership</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+
+
+  <header>
+    <div class="container" style="color: #333;">
+      <h1>Special Admission</h1>
+      <p>Explore Alternative Admission Pathways at Lordland University</p>
+    </div>
+  </header>
+  <div class="container">
+    <!-- Audit Admission Section -->
+    <section id="audit-admission">
+      <h2>Audit Admission</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Students who attend classes for personal enrichment and not for academic credit may be granted auditor’s status. Auditors attend classes with no obligations to participate actively in class work. Auditors will receive a grade from Lordland University for every course completed and may change the course grade from ‘audit’ to ‘credit’ once accepted into a degree program. A minimum cumulative GPA of 3.0 is required for auditor’s courses.
+          </p>
+        </div>
+        <img src="img2/image copy 2.png" alt="Audit Admission" />
+      </div>
+    </section>
+    
+    <!-- Provisional Admission Section -->
+    <section id="provisional-admission">
+      <h2>Provisional Admission</h2>
+      <div class="section-content">
+        <img src="img2/image copy 3.png" alt="Provisional Admission" />
+        <div class="section-text">
+          <p>
+            In certain exceptions, degree program applicants who are unable to furnish a copy of all the required admissions documents may be provisionally accepted with the approval of the dean. This includes applicants on academic probation or suspension at another university. Provisionally accepted students will be placed on probationary status and must receive a minimum cumulative GPA of 2.50 for courses completed during the first quarter of acceptance, or they will be dismissed from the university. Students meeting the minimum GPA are placed in regular standing in the following quarter.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Special Standing Admission Section -->
+    <section id="special-standing-admission">
+      <h2>Special Standing Admission</h2>
+      <div class="section-content">
+        <div class="section-text">
+          <p>
+            Students who wish to officially enroll in selective courses, but do not wish to receive a degree, may be granted a status of special standing. These students must meet the regular admissions requirements.
+          </p>
+        </div>
+        <img src="img2/pexels-dudumatik-2495239.jpg" alt="Special Standing Admission" />
+      </div>
+    </section>
+  </div>
+
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column about">
+        <h3>About Lordland University</h3>
+        <p>
+          Lordland University is dedicated to providing innovative and transformative education with a strong foundation in Christian ethics. Our mission is to empower students to become ethical leaders in their fields.
+        </p>
+      </div>
+      <div class="footer-column links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="policies.html">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-column contact">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:info@lordland.us">info@lordland.us</a></p>
+        <p>Phone: +1(213)846-4411</p>
+        <p>Address: 119 Belmont Ave, Los Angeles, California 90026</p>
+      </div>
+      <div class="footer-column social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/lordlanduniversity.overseas"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Lordland University. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    }</script>
+</body>
+</html>
